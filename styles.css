@@ -1,0 +1,334 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    --color1: #fefae0;
+    --color2: #283618;
+}
+
+
+.logo{
+    border-radius: 50%;
+    background-color: #fefae0;
+    padding: 10px;
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+    position: fixed;
+    top: 0;
+}
+
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.menu li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after{width: 100%;}
+.open-menu, .close-menu{
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+
+#check{ display: none;}
+
+.main-title{
+    font-family: 'Tangerine', cursive;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.main-img{
+    background-image: url(images/6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh;
+    margin: 20px;
+}
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3em;
+    font-size: 1.5rem;
+}
+
+.img-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.pic1, .pic2, .pic3, .pic4{
+    width: 250px; 
+    height:350px;
+    margin-top: 0.5em;
+}
+
+.pic1:hover, 
+.pic2:hover, 
+.pic3:hover, 
+.pic4:hover{cursor: pointer;}
+
+.secondary-text{
+    margin-bottom: 3em;
+    font-size: 1.4rem;
+}
+
+.secondary-img{
+    background-image: url(images/female-photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh;
+    margin: 20px;
+}
+
+.press{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 2em;
+    padding: 50px;
+    background-color: #ccd5ae;
+}
+
+.press-text {margin-bottom: 3em; font-size: 1.5rem;}
+
+.press-img {width: 150px;}
+
+.ethical-fabrics {margin-bottom: 3.5em;}
+
+.ethical-fabrics-title{margin-bottom: 3em;}
+
+.fabric-images{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.container{
+    position: relative;
+    display: inline-block;
+}
+
+.container img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.bottom-img{
+    background-image: url(images/beach-girls.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 50vh;
+    margin: 20px;
+}
+
+.section-discount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+p {margin: 1.3em 0;}
+
+input {padding: 10px 20px;}
+
+button{
+    border: none;
+    background-color: #283618;
+    color: #fefae0;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+}
+
+button:hover {cursor: pointer;}
+
+.section-thanks{
+    margin-top: 20px;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #283618;
+    color:#fefae0;
+    padding: 3.125em 20px 2em;
+}
+
+.footer-sections{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+li:hover{
+    cursor: pointer;
+}
+
+.socials{
+    display: flex;
+    gap: 25px;
+    font-size: 30px;
+}
+
+.copywrite{
+    font-size: 0.9375rem;
+} 
+
+@media(max-width: 610px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li{margin-top: 40px;}
+    .menu li a{padding: 10px;}
+    .open-menu, .close-menu{display: block;}
+    #check:checked ~ .menu{right: 0;}
+
+    .secondary-text{
+        font-size: 1.3rem;
+    }
+
+    .main-title{
+        font-size: 60px;
+    }
+
+    .main-img{
+        background-image: url(images/6.png);
+        background-attachment:scroll;
+        background-position: center;
+        height: 60vh;
+        margin: 20px;
+    }
+
+    .secondary-img{
+        background-image: url(images/female-photo\ copy.jpg);
+        background-attachment:scroll;
+        height: 60vh;
+        margin: 20px;
+    }
+
+    .bottom-img{
+        background-image: url(images/beach-girls\ copy.png);
+        background-attachment: scroll;
+        height: 60vh;
+        margin: 20px;
+    }
+
+    .subscribe{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .nav-bar{
+        align-items: flex-start;
+    }
+
+    .footer-sections{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+   .copywrite{
+        text-align: center;
+        margin-top: 30px;
+   }
+   
+}
